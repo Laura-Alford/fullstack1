@@ -1,0 +1,39 @@
+body{
+  padding-top:30px;
+  word-wrap:break-word;
+  background-color: lightskyblue;
+  text-align: center;
+}
+
+ul {
+  width: 100%;
+}
+
+li{
+  width: 20%;
+  height: 200px;
+  float: left;
+  border: 2px solid navy;
+  list-style: none;
+  padding: 20px;
+  font-size: 18px;
+}
+
+img{
+  height: 500px;
+  width: 250px;
+}
+
+h1, h2{
+  color: navy;
+}
+
+button{
+  clear: both;
+  color: aliceblue;
+  background-color: navy;
+}
+
+button:hover{
+  background-color: maroon;
+}
