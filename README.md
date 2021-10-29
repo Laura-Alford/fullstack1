@@ -8,3 +8,7 @@ Created a web application that allows users to login into a database and recomme
 
 Tech Used:
 HTML, CSS, JS, API, JSON, NODE.JS, EXPRESS, MONGODB, USER AUTH
+
+Usage
+run node server.js
+Navigate to localhost:8060
