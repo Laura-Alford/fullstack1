@@ -7,11 +7,13 @@ body{
 
 ul {
   width: 100%;
+  display:inline-block;
+  clear: both;
 }
 
 li{
   width: 20%;
-  height: 200px;
+  height: 124px;
   float: left;
   border: 2px solid navy;
   list-style: none;
@@ -20,11 +22,10 @@ li{
 }
 
 img{
-  height: 500px;
-  width: 250px;
+  width: 105px;
 }
 
-h1, h2{
+h1, h2, h3{
   color: navy;
 }
 
@@ -32,8 +33,22 @@ button{
   clear: both;
   color: aliceblue;
   background-color: navy;
+  display:inline-block;
+  padding: 0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
 }
 
 button:hover{
-  background-color: maroon;
+  background-color: skyblue;
 }
