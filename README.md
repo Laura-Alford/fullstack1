@@ -10,5 +10,5 @@ Tech Used:
 HTML, CSS, JS, API, JSON, NODE.JS, EXPRESS, MONGODB, USER AUTH
 
 Usage
-run node server.js
+Run node server.js
 Navigate to localhost:8060
