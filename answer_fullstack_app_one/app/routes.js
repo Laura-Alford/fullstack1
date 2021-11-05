@@ -9,6 +9,11 @@ module.exports = function(app, passport, db) {
         res.render('index.ejs');
     });
 
+    app.get('/connect-local.ejs', function(req, res) {
+      if (err) return console.log(err)
+      res.render('connect-local.ejs');
+  });
+
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
         db.collection('messages').find().toArray((err, result) => {
@@ -26,7 +31,7 @@ module.exports = function(app, passport, db) {
         res.redirect('/');
     });
 
-// message board routes ===============================================================
+// vacation dreamboard routes ===============================================================
 
     app.post('/messages', (req, res) => {
       // mesg is destination
@@ -51,6 +56,23 @@ module.exports = function(app, passport, db) {
         res.send(result)
       })
     })
+
+    /////Photo
+    app.put('/messages', (req, res) => {
+          db.collection('messages')
+          .findOneAndUpdate({month: req.body.month, msg: req.body.msg}, {
+            $set: {
+              thumbUp:req.body.thumbUp + 1
+            }
+          }, {
+            sort: {_id: -1},
+            upsert: true
+          }, (err, result) => {
+            if (err) return res.send(err)
+            res.send(result)
+          })
+        })
+    /////
 
     app.delete('/messages', (req, res) => {
       db.collection('messages').findOneAndDelete({name: req.body.name, msg: req.body.msg}, (err, result) => {
